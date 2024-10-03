@@ -2389,7 +2389,9 @@ public Token getNextToken()
            matchedToken.specialToken = specialToken;
            TokenLexicalActions(matchedToken);
        if (jjnewLexState[jjmatchedKind] != -1)
-         curLexState = jjnewLexState[jjmatchedKind];
+         {
+             curLexState = jjnewLexState[jjmatchedKind];
+         }
            CommonTokenAction(matchedToken);
            return matchedToken;
         }
@@ -2410,12 +2412,16 @@ public Token getNextToken()
            else
               SkipLexicalActions(null);
          if (jjnewLexState[jjmatchedKind] != -1)
-           curLexState = jjnewLexState[jjmatchedKind];
+           {
+               curLexState = jjnewLexState[jjmatchedKind];
+           }
            continue EOFLoop;
         }
         MoreLexicalActions();
       if (jjnewLexState[jjmatchedKind] != -1)
-        curLexState = jjnewLexState[jjmatchedKind];
+        {
+            curLexState = jjnewLexState[jjmatchedKind];
+        }
         curPos = 0;
         jjmatchedKind = 0x7fffffff;
         try {
